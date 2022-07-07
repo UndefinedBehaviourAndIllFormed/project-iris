@@ -51,7 +51,7 @@ If the project name contains only numeric characters, the program is ill-formed.
 
  ### 3.1 Usage
 
-``create-std``
+``create-yve``
 
 This will create the following project folder:
 
@@ -62,8 +62,11 @@ and inside the project folder, the following project structure:
 
 ![](project-structure.png)
 
-and inside the '.eye' extension file, the following content:
+and inside the '.cver' & '.eye' extension file, the following contents:
+![](project-cver.png)
 ![](project-eye.png)
+
+We will explain the formats of these domain-specific languages later.
 
 If the project folder or any of the items of the project structure couldn't be created, the program is ill-formed.
 
@@ -77,12 +80,9 @@ If the project name contains only numeric characters, the program is ill-formed.
 
  ### 4.1 Usage
 
-``compile-std``
+``compile-yve``
 
 This will compile the specified project folder.
 
 If the project folder or any of the items of its project structure is missing, the program is ill-formed.
 
- ## 5. Front-end pipeline
-
-When a project folder is specified along with the compile command, the 
