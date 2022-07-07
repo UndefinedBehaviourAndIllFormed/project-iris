@@ -31,7 +31,9 @@ An alphanumeric character could be any of the following:
 
 The program is not well formed according to this specification and will output an error
 
- 
+ ### 1.3 DSL
+
+It's the acronym of Domain Specific Language. These are designed to achieve specific tasks, easier.
 
  ## 2. Version command
 
@@ -55,7 +57,7 @@ If the project name contains only numeric characters, the program is ill-formed.
 
 This will create the following project folder:
 
-![](project-folder.png)
+![](project-folder_.png)
 
 
 and inside the project folder, the following project structure:
