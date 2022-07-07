@@ -63,7 +63,9 @@ and inside the project folder, the following project structure:
 ![](project-structure.png)
 
 and inside the '.cver' & '.eye' extension file, the following contents:
+
 ![](project-cver.png)
+
 ![](project-eye.png)
 
 We will explain the formats of these domain-specific languages later.
