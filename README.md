@@ -65,9 +65,19 @@ milliseconds
 
 Microseconds is the default measure unit.
 
- ### 1.8 
+ ### 1.8 Set
 
- ### 1.9 Literal string
+A collection of non-repeating objects.
+
+ ### 1.9 Natural number, zero-inclusive
+
+The set of positive integer numeric characters, including zero.
+
+ ### 1.10 Natural number, zero-exclusive
+
+The set of positive integer numeric characters, excluding zero.
+
+ ### 1.11 Literal string
 
 A sequence of no characters or UTF-8 characters surrounded by ":
 
@@ -140,23 +150,29 @@ It consists of three keywords:
 
  ### 5.1 Compiler Version
 
-``compiler_version = *Version*;``
+```rust
+compiler_version = [Version];
+```
 
 It specifies the version of the compiler to use for the compilation process. The compiler version inherently indicates the languages versions.
 
 If the version isn't one of the following, the program is ill-formed:
 
-```cpp
+```rust
 0.0.1
 ```
 
  #### 5.1.1 Example
 
-```cpp compiler_version = ..1;```
+```rust
+ compiler_version = 0.0.1;
+```
 
  ### 5.2 Measure
 
-``measure = *Measure Unit*;``
+```rust
+measure = [Measure Unit];
+```
 
 It specifies the time measure unit.
 
@@ -164,8 +180,20 @@ If the measure unit isn't a valid measure unit, the program is ill-formed.
 
  #### 5.2.1 Example
 
-```cpp measure = milliseconds;```
+```rust
+ measure = milliseconds;
+ ```
 
  ### 5.3 Indentation
 
-``indentation =  ``*Numeric*``;``
+```rust
+indentation = [Natural number, zero-exclusive];
+```
+
+Specifies the indentation space when the character ``\t`` is present.
+
+ #### 5.3.1 Example
+
+```rust
+indentation = 4;
+```
