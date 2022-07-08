@@ -1,3 +1,5 @@
+ # Iris environment - 0.0.1
+
 The Iris environment consist of the Iris programming language and various domain specific languages, which have as objective facilitate certain tasks, such as Cornea language, in charge of managing the project configuration, or the Pupil language, similar to Iris but specialised in GPU computing.
 
 It also consists of three console commands: version, create, and compile.
@@ -34,6 +36,42 @@ The program is not well formed according to this specification and will output a
  ### 1.3 DSL
 
 It's the acronym of Domain Specific Language. These are designed to achieve specific tasks, easier.
+
+ ### 1.4 End of sentence
+
+A character(';') that specifies the end of a sentence.
+
+ ### 1.5 Delimiter
+
+A character('.') that acts as a delimiter.
+
+ ### 1.6 Version
+
+A sequence of interleaved delimiters and numeric characters, with an end of sentence character indicating its end.
+
+If just after a delimiter, another delimiter is found, a numeric character '0' will be inserted between both delimiters.
+
+If just after a delimiter, an end of sentence is found, a numeric character '0' will be inserted between both the delimiter and the end of sentence.
+
+ ### 1.7 Measure Unit
+
+Specifies the measurement unit, which is used as the time output unit. Can be one of the following:
+
+```
+nanoseconds
+microseconds
+milliseconds
+```
+
+Microseconds is the default measure unit.
+
+ ### 1.8 
+
+ ### 1.9 Literal string
+
+A sequence of no characters or UTF-8 characters surrounded by ":
+
+ ``"my_literal_string"``
 
  ## 2. Version command
 
@@ -90,3 +128,44 @@ This will compile the specified project folder.
 
 If the project folder or any of the items of its project structure is missing, the program is ill-formed.
 
+ ## 5. C-Ver format
+
+The C-Ver DSL has an extension of '.cver', and its main mission is to provide the way to specify the compiler version.
+
+It consists of three keywords:
+
+ 1. ``compiler_version``
+ 2. ``measure``
+ 3. ``author``
+
+ ### 5.1 Compiler Version
+
+``compiler_version = *Version*;``
+
+It specifies the version of the compiler to use for the compilation process. The compiler version inherently indicates the languages versions.
+
+If the version isn't one of the following, the program is ill-formed:
+
+```cpp
+0.0.1
+```
+
+ #### 5.1.1 Example
+
+```cpp compiler_version = ..1;```
+
+ ### 5.2 Measure
+
+``measure = *Measure Unit*;``
+
+It specifies the time measure unit.
+
+If the measure unit isn't a valid measure unit, the program is ill-formed.
+
+ #### 5.2.1 Example
+
+```cpp measure = milliseconds;```
+
+ ### 5.3 Indentation
+
+``indentation =  ``*Numeric*``;``
